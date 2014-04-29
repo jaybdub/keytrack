@@ -32,7 +32,6 @@ private slots:
     //void saveSentDataToFile();
     //void saveReceivedDataToFile();
 private:
-
     QSerialPort *_serial_port;
     QByteArray _received_data;
     QByteArray _sent_data;

@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <aruco/aruco.h>
 #include <opencv2/opencv.hpp>
+#include <vector>
 
 namespace Ui {
 class ArucoWidget;
@@ -22,11 +23,21 @@ public:
     ~ArucoWidget();
 public slots:
     void detectMarkers(cv::Mat* img);
+    void enableDetection();
+    void disableDetection();
+    void setDetectionEnabled(bool detection_enabled);
+    void setUsingCalibration(bool using_calibration);
+
 signals:
-    //void markersDetected();
+    void markersDetected(vector<aruco::Marker> markers);
+    void qmarkersDetected(QList<aruco::Marker> qmarkers);
+private slots:
+    void updateMarkerSizeFromUI();
 private:
+    bool _detection_enabled;
     aruco::MarkerDetector _marker_detector;
-    QList<aruco::Marker> _markers;
+    vector<aruco::Marker> _markers;
+    QList<aruco::Marker> _qmarkers;
     //_using_calibration is true if a calibration file is being used when detecting markers, false otherwise.
     bool _using_calibration;
     //Marker size is the actual size of one side of the square marker in meters

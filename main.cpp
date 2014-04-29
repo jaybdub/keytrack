@@ -1,6 +1,7 @@
 #include "keytracksingle.h"
 #include "keytrackserial.h"
 #include "camerawidget.h"
+#include "arucowidget.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -12,11 +13,14 @@ int main(int argc, char *argv[])
     window.show();
     serial_widget1.show();
     serial_widget2.show();*/
-    CameraWidget cam;
+   /* CameraWidget cam;
     cam.setCaptureDevice(0);
     cam.setImageWidth(640);
     cam.setImageHeight(480);
     cam.connectCamera();
-    cam.show();
+    cam.show();*/
+    /*ArucoWidget aruco_widget(&window);
+    aruco_widget.show();*/
+    window.show();
     return a.exec();
 }

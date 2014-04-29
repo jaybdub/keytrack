@@ -24,16 +24,21 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="cameraWidgetTab">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Camera</string>
      </attribute>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="arucoWidgetTab">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Marker Detection</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="serialWidgetTab">
+     <attribute name="title">
+      <string>Serial</string>
      </attribute>
     </widget>
    </widget>
